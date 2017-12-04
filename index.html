@@ -44,12 +44,18 @@
       var done = false;
       function onPlayerStateChange(event) {
         if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 16000);
+          setTimeout(stopVideo, 19000);
           done = true;
         }
       }
       function stopVideo() {
-        player.stopVideo();
+        player.pauseVideo();
+	var r = confirm("Sit this one out?");
+	if (r == true) {
+          player.stopVideo();
+        } else {
+          player.playVideo();
+        }
       }
     </script>
   </body>
