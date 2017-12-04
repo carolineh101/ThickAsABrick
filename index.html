@@ -52,7 +52,7 @@
         player.pauseVideo();
 	var r = confirm("Sit this one out?");
 	if (r == true) {
-          document.getElementById("player").innerHTML = "<p>Really don't mind...</p>";
+          window.location.href = '/end.html';
         } else {
           player.playVideo();
         }
