@@ -52,7 +52,7 @@
         player.pauseVideo();
 	var r = confirm("Sit this one out?");
 	if (r == true) {
-          player.stopVideo();
+          document.getElementById("player").innerHTML = "<p>Really don't mind...</p>"
         } else {
           player.playVideo();
         }
